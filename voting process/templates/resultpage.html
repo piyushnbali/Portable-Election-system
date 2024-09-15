@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+<h3>
+    <a> Votes</a>
+</h3>
+
+
+    <hr/>
+    {%- for message in get_flashed_messages() %}
+       {{ message }}
+    {%- endfor %}
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Votes</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for voter in Voter %}
+            <tr>
+                <td>{{ voter.candidate }}</td>
+                <td>{{ voter.votes }}</td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

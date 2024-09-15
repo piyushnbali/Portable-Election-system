@@ -1,0 +1,38 @@
+<html>
+<head COLO>
+	<style >
+
+#piyush{
+	padding: 100px;
+    background-color: blue;
+    font-size: 40px;
+    border-radius: 20px;
+    font-weight: bolder;
+
+
+}
+#piyush:hover{
+	background-color: yellow;
+}
+
+</style>
+<marquee bgcolor="cyan" scrollamount="15"><FONT size="20" color="red">	<h1 align="center" >WELCOME TO WARD NO. 17 (pune)</h1></FONT></marquee>
+</head>
+<body>
+	<table border="1" align="center">
+		{% for task in tasks %}
+
+		<tr height=200>
+			<td width="200"><img src="{{url_for('static', filename='img/manse.png')}}"></td>
+			<td width="400"><H1>1. {{task.candidate}}</H1></td>
+			<td width="100">
+				<form action="/thank/{{task.id}}" align="center">
+				<button type = "submit" value="vote" ><a href = "/thank/{{task.id}}">VOTE</a></button>
+			</form>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+
+</body>
+</html>

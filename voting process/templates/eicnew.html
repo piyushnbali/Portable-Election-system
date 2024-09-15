@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+<body background="vote.jpg">
+
+
+<h3>New Voter's Registration Form</h3>
+
+
+<hr/>
+
+
+<link rel="stylesheet" href="static/update4.css">
+
+
+<body>
+
+
+{%- for category, message in get_flashed_messages(with_categories = true) %}
+
+
+<div class="alert alert-danger">
+
+
+    {{ message }}
+
+
+</div>
+
+
+{%- endfor %}
+
+
+
+
+
+    <form action="{{ request.path }}" method="POST">
+
+
+        <div class="row">
+
+
+            <div class="cell">
+
+
+            </div>
+
+
+        </div>
+
+
+        <form class="form">
+
+
+            <div class="form-group">
+
+
+                <label class="label">Enter Voter Id Number:</label>
+
+
+                <input placeholder="Enter VID Number" type="text" name="name" id="name" class="input"/>
+
+
+            </div>
+
+
+            <div class="form-group">
+
+
+                <label class="label">Password</label>
+
+
+                <input placeholder="Enter Password" type="password" name="passwd" id="passwd" class="input"/>
+
+
+            </div>
+
+
+            <div class="form-group">
+
+
+            </div>
+
+
+            <div class="form-group">
+
+
+            </div>
+
+
+            <label class="label">Ballot Index Number</label>
+
+
+            <div class="form-group">
+
+
+                <input placeholder="Enter BID" name="bid" id="bid" class="input"/>
+
+
+            </div>
+
+
+            <form action="/new" method="POST">
+
+
+                <button type="submit" value="Proceed"/>
+                PROCEED
+            </form>
+
+
+            <div id="iehfuk" class="row">
+
+
+            </div>
+
+
+        </form>
+
+
+ </body>
+
+
+</html>

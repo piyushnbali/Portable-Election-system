@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head></head>
+
+
+<body>
+
+
+<h3>
+
+
+    <a href="{{url_for('show_all')}}">List of Voters</a>
+
+
+</h3>
+
+
+<hr/>
+
+
+{%- for message in get_flashed_messages() %}
+
+
+{{ message }}
+
+
+{%- endfor %}
+
+
+<h3>Voter (<a href="{{ url_for('new') }}">Add Voter</a>)</h3>
+
+
+<table>
+
+
+    <thead>
+
+
+    <tr>
+
+
+        <th>Name</th>
+
+
+        <th>Password</th>
+
+
+        <th>Ballotpaperindex</th>
+
+
+
+
+
+        <th> city</th>
+
+
+    </tr>
+
+
+    </thead>
+
+
+    <tbody>
+
+
+    {% for voter in Voter %}
+
+
+    <tr>
+
+
+        <td>{{ voter.name }}</td>
+
+
+        <td>{{ voter.password }}</td>
+
+
+        <td>{{ voter.ballot_paper_index }}</td>
+
+
+        <td>{{voter.city}}</td>>
+
+    </tr>
+
+
+    {% endfor %}
+
+
+    </tbody>
+
+
+</table>
+
+
+</body>
+
+
+</html>

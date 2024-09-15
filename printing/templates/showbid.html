@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <table border="1" align="center">
+                {% for task in tasks %}
+
+                <tr height=200>
+                    <td width="200"><img src="{{url_for('static', filename='img/manse.png')}}"></td>
+                    <td width="400"><H1>1. {{task.candidate}}</H1></td>
+                    <td width="100">
+                        <form action="/thank/{{task.id}}" align="center">
+                        <button type = "submit" value="vote" ><a href = "/votenow">VOTE</a></button>
+                    </form>
+                    </td>
+                </tr>
+                {% endfor %}
+        </table>
+</body>
+</html>
